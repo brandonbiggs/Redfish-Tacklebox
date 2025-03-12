@@ -56,6 +56,12 @@ install: ##@ Install with pip
 install-uv: ##@ Install with uv
 	uv pip install dist/redfish_utilities-${VERSION}.tar.gz
 
+uninstall: ##@ Uninstall with pip
+	pip uninstall redfish-utilities
+
+uninstall-uv: ##@ Uninstall with uv
+	pip uninstall redfish-utilities
+
 lint: ##@ Run linting
 	black .
 	ruff check .
